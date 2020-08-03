@@ -18,6 +18,10 @@ car_tracker= cv2.CascadeClassifier(classifier_file)
 #detect cars
 cars= car_tracker.detectMultiScale(black_n_white)
 
+#drawing rectangles and squares around the cars
+for (x,y,w,h):
+    cv2.rectangle(img, (x,y), (x+w, y+h), (0, 0, 255), 2)
+
 #print(cars)
 
 
