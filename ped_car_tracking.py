@@ -2,7 +2,7 @@ import cv2
 
 #Image file
 img_file= "images\cars8.jpg"
-video= cv2.VideoCapture('video_car.mp4')
+video= cv2.VideoCapture('images\car_video.mp4')
 
 #pre-trained car classifier
 classifier_file= 'car_classifier.xml'
@@ -14,12 +14,12 @@ while True:
 
     if read_successful:
         #Must convert to grayscale
-        grayscaled_fram= cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        grayscaled_frame= cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     else:
         break
 
     #display the image with the faces spotted in black and white
-    cv2.imshow('ped_car_tracking', img)
+    cv2.imshow('ped_car_tracking', grayscaled_frame)
 
     #display for some time
     cv2.waitKey(1)
