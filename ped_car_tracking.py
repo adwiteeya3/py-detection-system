@@ -7,6 +7,7 @@ video= cv2.VideoCapture('video_car.mp4')
 #pre-trained car classifier
 classifier_file= 'car_classifier.xml'
 
+#run forever until car stops
 while True:
     #to read the current frame
     read_successful, frame= video.read()
