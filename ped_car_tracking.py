@@ -10,8 +10,23 @@ classifier_file= 'car_classifier.xml'
 #run forever until car stops
 while True:
     #to read the current frame
-    read_successful, frame= video.read()
+    (read_successful, frame)= video.read()
 
+    if read_successful:
+        #Must convert to grayscale
+        grayscaled_fram= cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    else:
+        break
+
+    #display the image with the faces spotted in black and white
+    cv2.imshow('ped_car_tracking', img)
+
+    #display for some time
+    cv2.waitKey(1)
+
+
+
+'''
 #create opencv image
 img= cv2.imread(img_file)
 
@@ -36,5 +51,7 @@ cv2.imshow('ped_car_tracking', img)
 
 #display for some time
 cv2.waitKey()
+
+'''
 
 print('so far so good!')
