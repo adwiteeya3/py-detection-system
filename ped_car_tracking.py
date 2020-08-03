@@ -1,7 +1,7 @@
 import cv2
 
 #Image file
-img_file= "images\car2.jpg"
+img_file= "images\cars8.jpg"
 
 #pre-trained car classifier
 classifier_file= 'car_classifier.xml'
@@ -17,6 +17,8 @@ car_tracker= cv2.CascadeClassifier(classifier_file)
 
 #detect cars
 cars= car_tracker.detectMultiScale(black_n_white)
+
+#print(cars)
 
 
 #display the image with the faces spotted in black and white
