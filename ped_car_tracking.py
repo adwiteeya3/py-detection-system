@@ -2,9 +2,14 @@ import cv2
 
 #Image file
 img_file= "images\cars8.jpg"
+video= cv2.VideoCapture('video_car.mp4')
 
 #pre-trained car classifier
 classifier_file= 'car_classifier.xml'
+
+while True:
+    #to read the current frame
+    read_successful, frame= video.read()
 
 #create opencv image
 img= cv2.imread(img_file)
