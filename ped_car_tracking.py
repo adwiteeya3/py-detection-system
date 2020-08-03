@@ -1,5 +1,9 @@
 import cv2
 
-img_file= "car2.jpg"
+#Image file
+img_file= "images\car2.jpg"
+
+#pre-trained car classifier
+classifier_file= 'car_classifier.xml'
 
 print('so far so good!')
