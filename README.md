@@ -1,4 +1,4 @@
-# ai_tracking_system
+# AI Car and Pedestrian Tracking System
 A smart detection system that can detect cars and pedestrians. Use of HAAR patterns in order to detect objects.
 Built using Python and OpenCV. The algorithm is trained by Hannes Kruppa and Bernt Schiele. 
  
